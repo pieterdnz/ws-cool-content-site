@@ -2,3 +2,4 @@
 
 Demo site for nextjs workshop
 Test
+Test2
