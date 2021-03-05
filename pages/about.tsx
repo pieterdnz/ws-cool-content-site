@@ -1,14 +1,9 @@
-import Link from "next/link";
-import { Form } from "../components/Form";
-import { Heads } from "../components/Heads";
-import Layout from "../components/Layout";
-import { NavItem } from "../components/NavItem";
+import Layout from '../components/Layout';
 
 const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
-    <Heads />
-    <Form />
-  </Layout>
+	<Layout title='About'>
+		<p>This is about me</p>
+	</Layout>
 );
 
 export default AboutPage;
