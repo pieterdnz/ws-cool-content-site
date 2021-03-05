@@ -5,13 +5,13 @@ import { LinkItem } from './LinkItem';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
-type Props = {
+interface IProps {
 	children?: ReactNode;
 	menuItems?: ReactNode;
 	title?: string;
-};
+}
 
-const Layout = ({ children, menuItems, title = 'This is the default title' }: Props) => (
+const Layout = ({ children, menuItems, title = 'This is the default title' }: IProps) => (
 	<>
 		<Head>
 			<title>{title}</title>
@@ -19,7 +19,7 @@ const Layout = ({ children, menuItems, title = 'This is the default title' }: Pr
 			<meta name='viewport' content='initial-scale=1.0, width=device-width' />
 		</Head>
 		<Header />
-		<div className='container mx-auto px-4'>{children}</div>
+		<main className='container mx-auto px-4 mb-10'>{children}</main>
 		<Footer />
 	</>
 );

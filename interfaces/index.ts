@@ -2,9 +2,17 @@
 // and then use them in any component by importing them. For
 // example, to import the interface below do:
 //
-// import { User } from 'path/to/interfaces';
+// import { Post } from 'path/to/interfaces';
 
-export type User = {
-	id: number;
-	name: string;
-};
+export interface IPost {
+	id: string;
+	title: string;
+	excerpt: string;
+	date: string;
+	content: {
+		html: string;
+	};
+	coverImage: {
+		url: string;
+	};
+}
