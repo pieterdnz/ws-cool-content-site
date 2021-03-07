@@ -3,9 +3,9 @@ export const Footer = () => (
 	<footer className='bg-purple-200 fixed bottom-0 left-0 right-0'>
 		<div className='container mx-auto px-4 '>
 			<div className=' flex flex-wrap items-center justify-between p-4 '>
-				<div className='w-full lg:w-auto lg:mr-6 mb-4 lg:mb-0 text-center'>© 2021 DNZ</div>
+				<div className='w-full lg:w-auto lg:mr-6 lg:mb-0 text-center'>© 2021 DNZ</div>
 				<div className='flex flex-col lg:flex-row items-center w-full lg:w-auto'>
-					<div className='mx-auto lg:mx-0 lg:ml-auto'>
+					<div className='hidden lg:block mx-auto lg:mx-0 lg:ml-auto'>
 						<a className='inline-block mt-0 text-blue-900 hover:text-indigo-600' href='#'>
 							Products
 						</a>
@@ -16,7 +16,7 @@ export const Footer = () => (
 							Customers
 						</a>
 					</div>
-					<div className='flex justify-center space-x-6 mt-4 lg:mt-0 lg:ml-8'>
+					<div className='hidden lg:flex justify-center space-x-6 mt-4 lg:mt-0 lg:ml-8'>
 						<a href='#'>
 							<svg
 								className='text-indigo-600 w-6 h-6'
