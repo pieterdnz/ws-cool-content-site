@@ -16,3 +16,10 @@ export interface IPost {
 		url: string;
 	};
 }
+
+export interface IProfile {
+	id: string;
+	title: string;
+	description: string;
+	imageUrl: string;
+}
