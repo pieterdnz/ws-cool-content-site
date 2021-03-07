@@ -21,7 +21,20 @@ const IndexPage = ({ posts }: { posts: IPost[] }) => (
 );
 
 export async function getStaticProps() {
-	console.log(process.env);
+	if (!process.env.GRAPHCMS_URL) {
+		return {
+			props: {
+				posts: [
+					{
+						id: 1,
+						title: 'No GraphCms endpoint',
+						excerpt: 'Please create a .env.development file',
+					},
+				],
+			},
+		};
+	}
+
 	const graphcms = new GraphQLClient(process.env.GRAPHCMS_URL);
 
 	const { posts } = await graphcms.request(

@@ -14,7 +14,7 @@ export const LinkItem = ({ href, title, className = '' }: IProps) => {
 			<a
 				target='_blank'
 				href={href}
-				className={`block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600 ${className}`}
+				className={`mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600 ${className}`}
 			>
 				{title}
 			</a>
@@ -23,9 +23,7 @@ export const LinkItem = ({ href, title, className = '' }: IProps) => {
 	//handle next route
 	return (
 		<Link href={href}>
-			<a
-				className={`block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600 ${className}`}
-			>
+			<a className={`mt-4 lg:mt-0 mr-10 text-blue-900 hover:text-indigo-600 ${className}`}>
 				{title}
 			</a>
 		</Link>
