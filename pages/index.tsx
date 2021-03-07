@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import { GraphQLClient, gql } from 'graphql-request';
-import { Post } from '../components/Post';
-import { IPost } from '../interfaces';
+//import { GraphQLClient, gql } from 'graphql-request';
+//import { Post } from '../components/Post';
+//import { IPost } from '../interfaces';
 
-const IndexPage = ({ posts }: { posts: IPost[] }) => (
+const IndexPage = () => (
 	<Layout title='Home | Next.js + TypeScript Example'>
 		<h1 className='text-xl text-purple-600'>Hello to the cool content nextjs website 👋</h1>
 		<p className='text-base py-4'>
@@ -12,55 +12,7 @@ const IndexPage = ({ posts }: { posts: IPost[] }) => (
 				<a>About</a>
 			</Link>
 		</p>
-		<div className='flex flex-wrap -mx-4 text-center'>
-			{posts.map((item) => (
-				<Post key={item.id} {...item} />
-			))}
-		</div>
 	</Layout>
 );
-
-export async function getStaticProps() {
-	if (!process.env.GRAPHCMS_URL) {
-		return {
-			props: {
-				posts: [
-					{
-						id: 1,
-						title: 'No GraphCms endpoint',
-						excerpt: 'Please create a .env.development file',
-					},
-				],
-			},
-		};
-	}
-
-	const graphcms = new GraphQLClient(process.env.GRAPHCMS_URL);
-
-	const { posts } = await graphcms.request(
-		gql`
-			query GetPosts {
-				posts {
-					id
-					title
-					excerpt
-					date
-					content {
-						html
-					}
-					coverImage {
-						url
-					}
-				}
-			}
-		`
-	);
-
-	return {
-		props: {
-			posts,
-		},
-	};
-}
 
 export default IndexPage;
