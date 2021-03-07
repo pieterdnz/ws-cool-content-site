@@ -23,3 +23,11 @@ export interface IProfile {
 	description: string;
 	imageUrl: string;
 }
+export interface IPage {
+	slug: string;
+	subtitle: string;
+	content: {
+		html: string;
+	};
+	title: string;
+}
