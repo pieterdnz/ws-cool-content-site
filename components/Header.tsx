@@ -11,10 +11,7 @@ export const Header = () => (
 					<LinkItem href='/' title='Home' />
 					<LinkItem href='/about' title='About' />
 					<LinkItem href='/info' title='Info' />
-					<LinkItem
-						href='https://api-eu-central-1.graphcms.com/v2/ckluw3qe12i8001xn04g57eae/master'
-						title='GraphCms API'
-					/>
+					<LinkItem href='/content' title='Content' />
 				</div>
 				<div className='lg:order-3 lg:block w-full lg:w-2/5 lg:text-right'>
 					<LinkItem href='/' title='Link' />
