@@ -18,7 +18,7 @@ export interface IPost {
 }
 
 export interface IProfile {
-	id: string;
+	name: string;
 	title: string;
 	description: string;
 	imageUrl: string;
