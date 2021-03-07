@@ -2,7 +2,21 @@
 
 Demo site for nextjs workshop
 
-## Tips
+Clone this repo
+
+```
+git clone https://github.com/pieterdnz/ws-cool-content-site.git
+
+cd ws-cool-content-site
+
+git checkout step0
+
+yarn
+
+yarn dev
+```
+
+step0 is the start of this course
 
 # Setup based on
 
