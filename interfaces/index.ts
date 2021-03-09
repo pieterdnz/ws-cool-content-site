@@ -23,6 +23,7 @@ export interface IProfile {
 	description: string;
 	imageUrl: string;
 }
+
 export interface IPage {
 	slug: string;
 	subtitle: string;
