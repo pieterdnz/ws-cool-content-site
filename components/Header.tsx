@@ -10,6 +10,7 @@ export const Header = () => (
 				<div className='lg:order-1 lg:block w-full lg:w-2/5'>
 					<LinkItem href='/' title='Home' />
 					<LinkItem href='/about' title='About' />
+					<LinkItem href='/info' title='Info' />
 					<LinkItem href={process.env.NEXT_PUBLIC_GRAPHCMS_URL || ''} title='GraphCms API' />
 				</div>
 				<div className='hidden lg:inline-block lg:order-3  w-full lg:w-2/5 lg:text-right'>
