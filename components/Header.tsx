@@ -12,7 +12,7 @@ export const Header = () => (
 					<LinkItem href='/about' title='About' />
 					<LinkItem href='/info' title='Info' />
 					<LinkItem href='/content' title='Content' />
-					<LinkItem href={process.env.NEXT_PUBLIC_GRAPHCMS_URL || ''} title='GraphCms API' />
+					<LinkItem href={process.env.NEXT_PUBLIC_GRAPHCMS_URL || ''} title='API' />
 				</div>
 				<div className='hidden lg:inline-block lg:order-3  w-full lg:w-2/5 lg:text-right'>
 					<img src='/dnz.svg' className='w-16 float-right' />
