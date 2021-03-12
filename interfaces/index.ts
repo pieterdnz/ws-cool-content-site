@@ -17,6 +17,11 @@ export interface IPost {
 	};
 }
 
+export interface IPostDetail extends IPost {
+	content: {
+		html: string;
+	};
+}
 export interface IProfile {
 	name: string;
 	title: string;
